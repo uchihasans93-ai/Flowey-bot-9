@@ -56,9 +56,9 @@ module.exports.HakimRun = async function({ api, event}) {
     const rawGender = info[targetID]?.gender;
     const altGender = info[targetID]?.gender?.toLowerCase?.();
     const gender =
-      rawGender === 2 || altGender === "male"? "مزة":
-      rawGender === 1 || altGender === "female"? "مز":
-      "❓ غير محدد";
+      rawGender === 2 || altGender === "male"? "مز":   
+      rawGender === 1 || altGender === "female"? "مزة": 
+      "غاي و العياذ بالله 🙂💔";
 
     const msgCount =
       typeof userInfo.messageCount === "number"? userInfo.messageCount:
@@ -73,7 +73,7 @@ module.exports.HakimRun = async function({ api, event}) {
       "صنم";
 
     const isAdmin = thread.adminIDs.some(e => e.id === targetID);
-    const isDev = targetID === "61553754531086";
+    const isDev = targetID === "100003922506337";
     const role = isDev? "صانع البوت": isAdmin? " أدمن": " عضو";
 
     
